@@ -3,7 +3,6 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'astols',
     'bashls',
     'cmake',
     'dockerls',
@@ -21,7 +20,7 @@ lsp.ensure_installed({
     'tsserver',
 })
 
-lsp.configure('lua-language-server', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
