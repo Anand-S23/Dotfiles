@@ -106,7 +106,7 @@
 )
 
 (when custom-linux
-  (setq custom-makescript "./build.linux")
+  (setq custom-makescript "./build.sh")
   (display-battery-mode 1)
 )
 
@@ -317,7 +317,7 @@
   (define-key c++-mode-map [S-tab] 'indent-for-tab-command)
   (define-key c++-mode-map "\C-y" 'indent-for-tab-command)
   (define-key c++-mode-map [C-tab] 'indent-region)
-  (define-key c++-mode-map "	" 'indent-region)
+  (define-key c++-mode-map "	" 'indent-region)
 
   (define-key c++-mode-map "\ej" 'imenu)
 
@@ -553,16 +553,17 @@
  '(auto-save-timeout 0)
  '(auto-show-mode t t)
  '(delete-auto-save-files nil)
- '(delete-old-versions (quote other))
+ '(delete-old-versions 'other)
  '(imenu-auto-rescan t)
  '(imenu-auto-rescan-maxout 500000)
  '(kept-new-versions 5)
  '(kept-old-versions 5)
- '(make-backup-file-name-function (quote ignore))
+ '(make-backup-file-name-function 'ignore)
  '(make-backup-files nil)
  '(mouse-wheel-follow-mouse nil)
  '(mouse-wheel-progressive-speed nil)
- '(mouse-wheel-scroll-amount (quote (15)))
+ '(mouse-wheel-scroll-amount '(15))
+ '(package-selected-packages '(ivy-prescient counsel ivy-rich ivy evil use-package))
  '(version-control nil))
 
 (define-key global-map "\t" 'dabbrev-expand)
@@ -570,11 +571,11 @@
 (define-key global-map [backtab] 'indent-for-tab-command)
 (define-key global-map "\C-y" 'indent-for-tab-command)
 (define-key global-map [C-tab] 'indent-region)
-(define-key global-map "	" 'indent-region)
+(define-key global-map "	" 'indent-region)
 
 ;; Theme (based off gruv-box)
-(add-to-list 'default-frame-alist '(font . "Liberation Mono-11.5"))
-(set-face-attribute 'default t :font "Liberation Mono-11.5")
+(add-to-list 'default-frame-alist '(font . "Liberation Mono-14"))
+(set-face-attribute 'default t :font "Liberation Mono-14")
 (set-face-attribute 'font-lock-function-name-face nil :foreground "burlywood3")
 (set-face-attribute 'font-lock-variable-name-face nil :foreground "burlywood3")
 (set-face-attribute 'font-lock-keyword-face nil :foreground "#FB4934")
@@ -595,3 +596,10 @@
 )
 
 (add-hook 'window-setup-hook 'post-load-stuff t)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
