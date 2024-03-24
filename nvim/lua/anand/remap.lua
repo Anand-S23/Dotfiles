@@ -35,8 +35,6 @@ keymap.set("n", "<S-h>", ":bprevious<CR>")
 keymap.set("x", "<leader>p", [["_dP]])
 keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
-this is something
-
 -- Yank to Clipboard
 keymap.set({"n", "v"}, "<leader>y", [["+y]])
 keymap.set("n", "<leader>Y", [["+Y]])
