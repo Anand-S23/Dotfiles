@@ -17,7 +17,8 @@ return require('packer').startup(function(use)
     use "lewis6991/gitsigns.nvim"
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
-    use 'lukas-reineke/indent-blankline.nvim'
+    use { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+
 
     use {
         'VonHeikemen/lsp-zero.nvim',
