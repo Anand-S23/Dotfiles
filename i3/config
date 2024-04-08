@@ -34,6 +34,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Picom for tranparency
+exec --no-startup-id picom -CGb
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -66,6 +69,8 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+z exec chromium
 bindsym $mod+x exec firefox
 bindsym $mod+c exec discord
+bindsym $mod+b exec nautilus
+bindsym Print exec "flameshot gui"
 
 # change focus
 bindsym $mod+j focus left
@@ -193,3 +198,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+exec_always feh --bg-fill /home/anand/Pictures/walk2.jpg
+
