@@ -69,7 +69,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+z exec chromium
 bindsym $mod+x exec firefox
 bindsym $mod+c exec discord
-bindsym $mod+b exec nautilus
+bindsym $mod+b exec pcmanfm
 bindsym Print exec "flameshot gui"
 
 # change focus
@@ -196,7 +196,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
 
 exec_always feh --bg-fill /home/anand/Pictures/walk2.jpg
